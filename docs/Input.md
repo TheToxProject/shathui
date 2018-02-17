@@ -3,6 +3,30 @@
 The Input component simply displays a styled input. It renders exactly the same not depending on the platform.  
 This component is animated while running on mobile platforms. This allow for cool "hover/active" effects. There are no needs for building this on animated stuff on desktop/web because here we can use CSS transitions/animations and :hover/:active to handle this.
 
+To display a simple input, just do the following:
+
+```jsx
+import { Input } from '@ToxClient/shathui';
+
+render() {
+  return (
+    <Input placeholder="Username..." />
+  );
+}
+```
+
+An input can also be obscured by using the [`secureTextEntry`](#securetextentry) prop like this:
+
+```jsx
+import { Input } from '@ToxClient/shathui';
+
+render() {
+  return (
+    <Input placeholder="Password..." secureTextEntry={true} />
+  );
+}
+```
+
 ### Props
 
 * [Input props...](https://facebook.github.io/react-native/docs/textinput.html#props)
