@@ -55,7 +55,7 @@ I accept donations in form of Monero, Bitcoin and Etherum. You can also Patreon 
 #### Ethereum
 
 ```
-0x56E3273D42B40d47E122fF62108dEDC974A4206e
+0xe96357E4Dabd51970Bf8fcF9633Cc0c70712466e
 ```
 
 #### Patreon
