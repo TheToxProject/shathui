@@ -14,7 +14,7 @@ Components are written in two flavors ; `component.js` for React & `component.{n
 ## 🔥 Components
 
 * [Button]()
-* [Input]()
+* [Input](docs/Input.md)
 
 ## 🍭 In progress
 
