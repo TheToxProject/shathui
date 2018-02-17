@@ -1,7 +1,8 @@
 {
   "name": "@toxclient/shathui",
-  "version": "0.1.1",
-  "description": "Platform-agnostic Chat UI components for The Universal Tox Client. ",
+  "version": "0.1.2",
+  "description":
+    "Platform-agnostic Chat UI components for The Universal Tox Client. ",
   "main": "lib/index.js",
   "directories": {
     "doc": "docs",
@@ -10,7 +11,9 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook start -p 7007"
   },
   "repository": {
     "type": "git",
@@ -35,6 +38,15 @@
   "dependencies": {
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-native": "^0.53.0"
+    "react-native": "^0.53.0",
+    "react-native-cli": "^2.0.1"
+  },
+  "devDependencies": {
+    "@storybook/react-native": "^3.3.13",
+    "@storybook/addon-actions": "^3.3.13",
+    "@storybook/addon-links": "^3.3.13",
+    "@storybook/addons": "^3.3.13",
+    "babel-core": "^6.26.0",
+    "react-dom": "^16.2.0"
   }
 }
