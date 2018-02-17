@@ -1,0 +1,36 @@
+{
+  "name": "shathui",
+  "version": "0.1.0",
+  "description":
+    "Platform-agnostic Chat UI components for The Universal Tox Client. ",
+  "main": "lib/index.js",
+  "directories": {
+    "doc": "docs",
+    "example": "examples",
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tox-Client/shathui.git"
+  },
+  "keywords": [
+    "shathui",
+    "react",
+    "react native",
+    "chat ui",
+    "components",
+    "tox",
+    "tox client",
+    "platform agnostic"
+  ],
+  "author": "SkyzohKey <skyzohkey@protonmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tox-Client/shathui/issues"
+  },
+  "homepage": "https://github.com/Tox-Client/shathui#readme"
+}
