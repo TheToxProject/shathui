@@ -1,5 +1,5 @@
 {
-  "name": "shathui",
+  "name": "@toxclient/shathui",
   "version": "0.1.0",
   "description":
     "Platform-agnostic Chat UI components for The Universal Tox Client. ",

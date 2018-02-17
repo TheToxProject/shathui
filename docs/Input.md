@@ -6,7 +6,7 @@ This component is animated while running on mobile platforms. This allow for coo
 To display a simple input, just do the following:
 
 ```jsx
-import { Input } from '@ToxClient/shathui';
+import { Input } from '@toxclient/shathui';
 
 render() {
   return (
@@ -18,7 +18,7 @@ render() {
 An input can also be obscured by using the [`secureTextEntry`](#securetextentry) prop like this:
 
 ```jsx
-import { Input } from '@ToxClient/shathui';
+import { Input } from '@toxclient/shathui';
 
 render() {
   return (
