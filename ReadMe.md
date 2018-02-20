@@ -1,5 +1,7 @@
 # ShatHui 💬
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Tox-Client/shathui.svg)](https://greenkeeper.io/)
+
 Shathui stands for « Chat-UI » and is a React/React Native library aiming to provide components to develop a modern & beautiful IM application based on the Material Design guidelines.
 
 Components are written in two flavors ; `component.js` for React & `component.{native|android|ios}.js` for React Native. This allows for the components to be used the same way on both frameworks, allowing truely single codebase.
