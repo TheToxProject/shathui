@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Platform, View, Image } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { getStyles } from './styles';
+import styles from './styles';
 
 import webMuted from './assets/logo-muted.svg';
 import webWhite from './assets/logo-white.svg';
@@ -70,10 +70,9 @@ export class Logo extends Component {
     const alignStyle = this.getAlignStyle(align);
     const logoSource = this.getVariantImage(variant);
     const logoStyle = height ? { height: height, width: height * SCALE_RATIO } : sizeStyle;
-    const styles = getStyles(alignStyle);
 
     return (
-      <View style={styles} {...rest}>
+      <View style={{ ...styles.container, alignItems: alignStyle }} {...rest}>
         <Image
           {...rest}
           style={logoStyle}

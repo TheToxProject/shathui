@@ -1,10 +1,7 @@
-const getStyles = alignStyle => {
-  return {
-    container: {
-      width: '100%',
-      alignItems: alignStyle
-    }
-  };
+const styles = {
+  container: {
+    width: '100%'
+  }
 };
 
-export default getStyles;
+export default styles;
