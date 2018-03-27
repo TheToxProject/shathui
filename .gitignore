@@ -58,3 +58,4 @@ buck-out/
 dist/
 coverage/
 ios/main.jsbundle
+lib/

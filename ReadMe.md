@@ -5,7 +5,7 @@ Shathui stands for « Chat-UI » and is a set of React/React Native components c
 ### 📐 Table of Contents
 
 * [Components](#-components)
-* [In progress](#-in-progress)
+* [Development](#-development)
 * [Donations](#-donations)
 * [License](#-license)
 
@@ -14,20 +14,11 @@ Shathui stands for « Chat-UI » and is a set of React/React Native components c
 * Avatar
 * TabsView
 
-## 🍭 In progress
+## 🍭 Development
 
-* [Textarea]()
-* [Image]()
-* [HeadingText]()
-* [PresenceIndicator]()
-* [ContactsList]()
-* [ContactItem]()
-* [MessagesList]()
-* [MessageItem]()
-* [FileMessageItem]()
-* [InfoMessageItem]()
-* [ChatHeader]()
-* [ComposerArea]()
+This project is self-managed. It means that we have some husky hooks defined in the package.json that does all the work for us. So you just need to write your ES6 code, then commit (which will lint the code, and maybe reject it if it has lint error) and push/publish (will compile the current code for commonjs/umd).
+
+Anyway, for more productive coding sessions, you can use `yarn start` to watch for changes & obtain direct feedback/errors.
 
 ## 💸 Donations
 

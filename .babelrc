@@ -1,4 +1,15 @@
 {
-  "presets": ["env", "react-native"],
-  "plugins": ["transform-object-rest-spread"]
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": ["last 2 versions", "safari >= 7"]
+        },
+        "loose": true
+      }
+    ],
+    "react-native"
+  ],
+  "plugins": ["transform-object-rest-spread", "transform-class-properties"]
 }
