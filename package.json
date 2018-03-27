@@ -1,6 +1,6 @@
 {
   "name": "@toxclient/shathui",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Platform-agnostic Chat UI components for The Universal Tox Client. ",
   "main": "lib/index.js",
   "files": ["lib/"],
@@ -35,8 +35,6 @@
   },
   "homepage": "https://github.com/Tox-Client/shathui#readme",
   "dependencies": {
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
     "prop-types": "^15.6.0"
   },
   "peerDependencies": {
@@ -50,6 +48,8 @@
     "@storybook/react-native": "^3.3.13",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.7.0",
     "eslint-plugin-react-native": "^3.2.1",
