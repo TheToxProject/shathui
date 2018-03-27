@@ -60,7 +60,7 @@ class TabsView extends Component {
     return true;
   }
 
-  _isMovingHorizontally(evt, gestureState) {
+  isMovingHorizontally(evt, gestureState) {
     const { swipeTolerance } = this.props;
 
     return (
@@ -69,7 +69,7 @@ class TabsView extends Component {
     );
   }
 
-  _canMoveScreen(evt, gestureState) {
+  canMoveScreen(evt, gestureState) {
     const { deadZone } = this.props;
     const { tabsCount, selectedIndex } = this.state;
 
@@ -80,7 +80,7 @@ class TabsView extends Component {
     );
   }
 
-  _startGesture(evt, gestureState) {
+  startGesture(evt, gestureState) {
     const { onSwipeStart } = this.props;
 
     if (typeof onSwipeStart === 'function') {
@@ -90,7 +90,7 @@ class TabsView extends Component {
     this.state.animated.stopAnimation();
   }
 
-  _respondToGesture(evt, gestureState) {
+  respondToGesture(evt, gestureState) {
     const { tabsCount, selectedIndex } = this.state;
 
     if (
@@ -105,7 +105,7 @@ class TabsView extends Component {
     this.state.animated.setValue(gestureState.dx);
   }
 
-  _terminateGesture(evt, gestureState) {
+  terminateGesture(evt, gestureState) {
     const { tabsCount, selectedIndex, pendingIndex } = this.state;
     const { width, onSwipeEnd } = this.props;
 
@@ -149,7 +149,7 @@ class TabsView extends Component {
     this.transitionTo(nextIndex);
   }
 
-  _transitionTo(index, animated = true) {
+  transitionTo(index, animated = true) {
     const { width, animTension, animFriction } = this.props;
     const offset = -index * width;
 

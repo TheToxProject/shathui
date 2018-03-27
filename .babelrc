@@ -9,6 +9,7 @@
         "loose": true
       }
     ],
+    "react",
     "react-native"
   ],
   "plugins": ["transform-object-rest-spread", "transform-class-properties"]
