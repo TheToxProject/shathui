@@ -52,9 +52,9 @@ export class Logo extends Component {
   getVariantImage(variant) {
     return Platform.select({
       web: {
-        muted: webMuted,
-        white: webWhite,
-        black: webBlack
+        muted: muted,
+        white: white,
+        black: black
       },
       default: {
         muted: muted,
