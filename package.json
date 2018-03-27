@@ -1,9 +1,9 @@
 {
   "name": "@toxclient/shathui",
-  "version": "0.3.1",
+  "version": "0.3.3",
   "description": "Platform-agnostic Chat UI components for The Universal Tox Client. ",
-  "main": "lib/index.js",
-  "files": ["lib/"],
+  "main": "lib/bundle.js",
+  "files": ["lib/", "umd/"],
   "directories": {
     "doc": "docs",
     "example": "examples",
@@ -12,9 +12,9 @@
   },
   "scripts": {
     "start": "yarn run build -w",
-    "build": "babel src --out-dir lib",
-    "build:umd": "webpack --progress -p --config webpack.config.umd.js",
-    "stats": "webpack --progress -p --config webpack.config.umd.js --json > stats.json",
+    "build": "webpack --progress -p --config webpack/webpack.config.prod.js",
+    "build:umd": "webpack --progress -p --config webpack/webpack.config.umd.js",
+    "stats": "webpack --progress -p --config webpack/webpack.config.umd.js --json > stats.json",
     "lint": "eslint .",
     "precommit": "yarn run lint",
     "prepublish": "yarn run build"
@@ -40,6 +40,7 @@
   },
   "homepage": "https://github.com/Tox-Client/shathui#readme",
   "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
     "prop-types": "^15.6.0",
     "react-native-material-ripple": "^0.8.0"
   },
@@ -57,10 +58,13 @@
     "babel-eslint": "^8.2.2",
     "babel-loader": "^7.1.4",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-es2015-parameters": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-native": "^4.0.0",
+    "babel-preset-stage-0": "^6.24.1",
     "compression-webpack-plugin": "^1.1.11",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.7.0",

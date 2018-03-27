@@ -7,9 +7,7 @@
   },
 
   "plugins": ["react", "react-native"],
-
-  "extends": ["plugin:react/recommended"],
-
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
   "parser": "babel-eslint",
 
   "parserOptions": {
@@ -124,10 +122,7 @@
     "no-throw-literal": 2, // restrict what can be thrown as an exception (off by default)
     "no-unused-expressions": 2, // disallow usage of expressions in statement position
     "no-void": 2, // disallow use of void operator (off by default)
-    "no-warning-comments": [
-      0,
-      { "terms": ["todo", "fixme"], "location": "start" }
-    ], // disallow usage of configurable warning terms in comments": 2, // e.g. TODO or FIXME (off by default)
+    "no-warning-comments": [0, { "terms": ["todo", "fixme"], "location": "start" }], // disallow usage of configurable warning terms in comments": 2, // e.g. TODO or FIXME (off by default)
     "no-with": 2, // disallow use of the with statement
     "radix": 2, // require use of the second argument for parseInt() (off by default)
     "vars-on-top": 2, // requires to declare all vars on top of their containing scope (off by default)
@@ -197,10 +192,7 @@
     "sort-vars": 0, // sort variables within the same declaration block (off by default)
     "keyword-spacing": [1, { "before": true, "after": true }], // require a space after certain keywords (off by default)
     "space-before-blocks": [1, "always"], // require or disallow space before blocks (off by default)
-    "space-before-function-paren": [
-      1,
-      { "anonymous": "always", "named": "never" }
-    ], // require or disallow space before function opening parenthesis (off by default)
+    "space-before-function-paren": [1, { "anonymous": "always", "named": "never" }], // require or disallow space before function opening parenthesis (off by default)
     "space-in-parens": [1, "never"], // require or disallow spaces inside parentheses (off by default)
     "space-unary-ops": [1, { "words": true, "nonwords": false }], // Require or disallow spaces before/after unary operators (words on by default, nonwords off by default)
     "spaced-comment": [1, "always"], // require or disallow a space immediately following the // in a line comment (off by default)

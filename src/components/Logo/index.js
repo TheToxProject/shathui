@@ -4,6 +4,13 @@ import PropTypes from 'prop-types';
 
 import { getStyles } from './styles';
 
+import webMuted from './assets/logo-muted.svg';
+import webWhite from './assets/logo-white.svg';
+import webBlack from './assets/logo-black.svg';
+import muted from './assets/logo-muted.png';
+import white from './assets/logo-white.png';
+import black from './assets/logo-black.png';
+
 const ORIGINAL_WIDTH = 149;
 const ORIGINAL_HEIGHT = 60;
 const SCALE_RATIO = ORIGINAL_WIDTH / ORIGINAL_HEIGHT;
@@ -43,24 +50,22 @@ export class Logo extends Component {
   }
 
   getVariantImage(variant) {
-    return {
-      ...Platform.select({
-        web: {
-          muted: require('./assets/logo-muted.svg'),
-          white: require('./assets/logo-white.svg'),
-          black: require('./assets/logo-black.svg')
-        },
-        default: {
-          muted: require('./assets/logo-muted.png'),
-          white: require('./assets/logo-white.png'),
-          black: require('./assets/logo-black.png')
-        }
-      })
-    }[variant];
+    return Platform.select({
+      web: {
+        muted: webMuted,
+        white: webWhite,
+        black: webBlack
+      },
+      default: {
+        muted: muted,
+        white: white,
+        black: black
+      }
+    })[variant];
   }
 
   render() {
-    const { size, align, variant, height } = this.props;
+    const { size, align, variant, height, ...rest } = this.props;
     const sizeStyle = this.getSizeStyle(size);
     const alignStyle = this.getAlignStyle(align);
     const logoSource = this.getVariantImage(variant);
@@ -68,9 +73,9 @@ export class Logo extends Component {
     const styles = getStyles(alignStyle);
 
     return (
-      <View style={styles} {...this.props}>
+      <View style={styles} {...rest}>
         <Image
-          {...this.props}
+          {...rest}
           style={logoStyle}
           resizeMode={'contain'}
           {...Platform.select({

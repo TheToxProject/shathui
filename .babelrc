@@ -1,16 +1,9 @@
 {
-  "presets": [
-    [
-      "env",
-      {
-        "targets": {
-          "browsers": ["last 2 versions", "safari >= 7"]
-        },
-        "loose": true
-      }
-    ],
-    "react",
-    "react-native"
-  ],
-  "plugins": ["transform-object-rest-spread", "transform-class-properties"]
+  "presets": ["env", "es2015", "react", "react-native", "stage-0"],
+  "plugins": [
+    "transform-object-rest-spread",
+    "transform-class-properties",
+    "transform-es2015-destructuring",
+    "transform-es2015-parameters"
+  ]
 }

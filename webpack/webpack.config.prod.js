@@ -1,22 +1,50 @@
+const path = require('path');
 const webpack = require('webpack');
 const CompressionPlugin = require('compression-webpack-plugin');
 
+const MEDIA_NAME = 'assets/[name].[hash:8].[ext]';
+const BUNDLE_NAME = 'bundle.js';
+
 module.exports = {
-  cache: true,
+  cache: false,
   entry: './src/index.js',
   output: {
-    path: __dirname + '/umd',
-    filename: 'tox-shathui.js',
-    library: 'ToxShathui',
-    libraryTarget: 'umd',
-    umdNamedDefine: true
+    path: path.resolve(__dirname, '..', 'dist', 'lib'),
+    filename: BUNDLE_NAME
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
   },
   module: {
     rules: [
       {
-        test: /.jsx?$/,
-        use: 'babel-loader',
-        exclude: /node_modules/
+        test: /\.(js|jsx|mjs)$/,
+        include: [/src\/*/, /node_modules\/react-native-/],
+        loader: require.resolve('babel-loader'),
+        options: {
+          babelrc: false,
+          presets: [require.resolve('babel-preset-react-native')],
+          cacheDirectory: true
+        }
+      },
+      {
+        oneOf: [
+          {
+            test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+            loader: require.resolve('url-loader'),
+            options: {
+              limit: 10000,
+              name: MEDIA_NAME
+            }
+          },
+          {
+            loader: require.resolve('file-loader'),
+            exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/],
+            options: {
+              name: MEDIA_NAME
+            }
+          }
+        ]
       }
     ]
   },
@@ -46,7 +74,7 @@ module.exports = {
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),
-      'process.env.VERSION': JSON.stringify(require('./package.json').version)
+      'process.env.VERSION': JSON.stringify(require('../package.json').version)
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({
