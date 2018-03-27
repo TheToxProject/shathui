@@ -13,6 +13,8 @@ Shathui stands for « Chat-UI » and is a set of React/React Native components c
 
 * Avatar
 * TabsView
+* Touchable
+* Logo
 
 ## 🍭 Development
 
