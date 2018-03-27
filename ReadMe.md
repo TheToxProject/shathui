@@ -1,8 +1,6 @@
 # ShatHui 💬
 
-Shathui stands for « Chat-UI » and is a React/React Native library aiming to provide components to develop a modern & beautiful IM application based on the Material Design guidelines.
-
-Components are written in two flavors ; `component.js` for React & `component.{native|android|ios}.js` for React Native. This allows for the components to be used the same way on both frameworks, allowing truely single codebase.
+Shathui stands for « Chat-UI » and is a set of React/React Native components crafted for the new Tox Universal/Isomorphic client. The components aims to be customizable while staying super strong and self-healing against errors.
 
 ### 📐 Table of Contents
 
@@ -13,15 +11,14 @@ Components are written in two flavors ; `component.js` for React & `component.{n
 
 ## 🔥 Components
 
-* [Button]()
-* [Input](docs/Input.md)
+* Avatar
+* TabsView
 
 ## 🍭 In progress
 
 * [Textarea]()
 * [Image]()
 * [HeadingText]()
-* [Avatar]()
 * [PresenceIndicator]()
 * [ContactsList]()
 * [ContactItem]()
