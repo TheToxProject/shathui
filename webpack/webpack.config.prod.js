@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const CompressionPlugin = require('compression-webpack-plugin');
 
+const BUILD_PATH = path.resolve(__dirname, '..', 'dist', 'lib');
 const MEDIA_NAME = 'assets/[name].[hash:8].[ext]';
 const BUNDLE_NAME = 'bundle.js';
 
@@ -9,8 +10,9 @@ module.exports = {
   cache: false,
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, '..', 'dist', 'lib'),
+    path: BUILD_PATH,
     filename: BUNDLE_NAME,
+    publicPath: BUILD_PATH,
     library: 'ToxShathui',
     libraryTarget: 'amd'
   },

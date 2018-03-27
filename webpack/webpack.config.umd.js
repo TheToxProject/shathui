@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const CompressionPlugin = require('compression-webpack-plugin');
 
+const BUILD_PATH = path.resolve(__dirname, '..', 'dist', 'umd');
 const MEDIA_NAME = 'assets/[name].[hash:8].[ext]';
 const BUNDLE_NAME = 'tox-shathui.js';
 
@@ -9,7 +10,7 @@ module.exports = {
   cache: true,
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, '..', 'dist', 'umd'),
+    path: BUILD_PATH,
     filename: BUNDLE_NAME,
     library: 'ToxShathui',
     libraryTarget: 'umd',
