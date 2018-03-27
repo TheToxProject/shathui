@@ -1,5 +1,7 @@
 # ShatHui 💬
 
+[![Build Status](https://travis-ci.org/TheToxProject/shathui.svg?branch=master)](https://travis-ci.org/TheToxProject/shathui) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
 Shathui stands for « Chat-UI » and is a set of React/React Native components crafted for the new Tox Universal/Isomorphic client. The components aims to be customizable while staying super strong and self-healing against errors.
 
 ### 📐 Table of Contents
