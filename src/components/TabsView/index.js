@@ -62,7 +62,6 @@ class TabsView extends Component {
 
   isMovingHorizontally(evt, gestureState) {
     const { swipeTolerance } = this.props;
-
     return (
       Math.abs(gestureState.dx) > Math.abs(gestureState.dy * swipeTolerance) &&
       Math.abs(gestureState.vx) > Math.abs(gestureState.vy * swipeTolerance)
@@ -82,7 +81,6 @@ class TabsView extends Component {
 
   startGesture(evt, gestureState) {
     const { onSwipeStart } = this.props;
-
     if (typeof onSwipeStart === 'function') {
       onSwipeStart(evt, gestureState);
     }
@@ -92,11 +90,8 @@ class TabsView extends Component {
 
   respondToGesture(evt, gestureState) {
     const { tabsCount, selectedIndex } = this.state;
-
     if (
-      // swiping left
       (gestureState.dx > 0 && selectedIndex <= 0) ||
-      // swiping right
       (gestureState.dx < 0 && selectedIndex >= tabsCount - 1)
     ) {
       return;
@@ -161,10 +156,8 @@ class TabsView extends Component {
 
     // The following allows for initial tab index to avoid being
     // animated (which creates a laggy effect)
-    let animationTiming = null;
-    if (animated) {
-      animationTiming = Animated.spring;
-    } else {
+    let animationTiming = Animated.spring;
+    if (!animated) {
       animationTiming = Animated.timing;
       animationConfig.duration = 0;
     }
