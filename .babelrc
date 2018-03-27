@@ -1,3 +1,4 @@
 {
-  "presets": ["env", "react-native"]
+  "presets": ["env", "react-native"],
+  "plugins": ["transform-object-rest-spread"]
 }
