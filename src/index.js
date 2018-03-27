@@ -6,6 +6,7 @@
  */
 
 import Avatar from './components/Avatar';
+import Button from './components/Button';
 import Logo from './components/Logo';
 import TabsView from './components/TabsView';
 import Touchable from './components/Touchable';
@@ -13,4 +14,4 @@ import Touchable from './components/Touchable';
 /**
  * Let export our big s/shit/module/, lol.
  */
-export { Avatar, Logo, TabsView, Touchable };
+export { Avatar, Button, Logo, TabsView, Touchable };
