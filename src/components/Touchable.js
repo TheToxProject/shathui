@@ -1,4 +1,5 @@
 import { TouchableNativeFeedback, Platform } from 'react-native';
+import PropTypes from 'prop-types';
 import TouchableRipple from 'react-native-material-ripple';
 
 const Touchable = Platform.select({
@@ -7,5 +8,9 @@ const Touchable = Platform.select({
   windows: TouchableRipple,
   web: TouchableRipple
 });
+
+Touchable.propTypes = {
+  children: PropTypes.isRequired
+};
 
 export default Touchable;
