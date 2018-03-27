@@ -10,7 +10,9 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, '..', 'dist', 'lib'),
-    filename: BUNDLE_NAME
+    filename: BUNDLE_NAME,
+    library: 'ToxShathui',
+    libraryTarget: 'amd'
   },
   resolve: {
     extensions: ['.js', '.jsx']
