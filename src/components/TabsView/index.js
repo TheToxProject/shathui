@@ -237,7 +237,10 @@ class TabsView extends Component {
           <Animated.View
             style={{
               backgroundColor: underlineColor,
-              transform: [{ translateX: tabLineTranslateX }, { translateY: -underlineHeight }],
+              transform: [
+                { translateX: isNaN(tabLineTranslateX) === false ? tabLineTranslateX : 0 },
+                { translateY: -underlineHeight }
+              ],
               height: underlineHeight,
               width: width / tabsCount - 1
             }}
@@ -247,7 +250,10 @@ class TabsView extends Component {
           {...this.panResponder.panHandlers}
           style={{
             ...styles.contentView,
-            transform: [{ translateX }],
+            // Fix an issue with Android Bridge that expect a number.
+            // When the interpolation fails for some reason, it crash.
+            // Monkey-patching this, :(
+            transform: [{ translateX: isNaN(translateX) === false ? translateX : 0 }],
             width: tabsCount * width,
             maxWidth: tabsCount * width,
             minWidth: tabsCount * width,
