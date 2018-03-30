@@ -28,7 +28,6 @@ const styles = {
     resizeMode: 'contain'
   },
   noAvatar: {
-    resizeMode: 'contain',
     overflow: 'hidden',
     justifyContent: 'center',
     alignItems: 'center',
