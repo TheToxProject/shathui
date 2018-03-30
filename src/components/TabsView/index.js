@@ -238,7 +238,8 @@ class TabsView extends Component {
             style={{
               backgroundColor: underlineColor,
               transform: [
-                { translateX: isNaN(tabLineTranslateX) === false ? tabLineTranslateX : 0 },
+                // eslint-disable-next-line
+                { translateX: tabLineTranslateX != null ? tabLineTranslateX : 0 },
                 { translateY: -underlineHeight }
               ],
               height: underlineHeight,
@@ -253,7 +254,8 @@ class TabsView extends Component {
             // Fix an issue with Android Bridge that expect a number.
             // When the interpolation fails for some reason, it crash.
             // Monkey-patching this, :(
-            transform: [{ translateX: isNaN(translateX) === false ? translateX : 0 }],
+            // eslint-disable-next-line
+            transform: [{ translateX: translateX != null ? translateX : 0 }],
             width: tabsCount * width,
             maxWidth: tabsCount * width,
             minWidth: tabsCount * width,
