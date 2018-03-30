@@ -71,7 +71,7 @@ export class Button extends Component {
 }
 
 Button.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.element, PropTypes.func]),
   text: PropTypes.string,
   raised: PropTypes.bool,
   size: PropTypes.oneOf(['small', 'normal', 'medium']),
