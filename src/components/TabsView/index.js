@@ -52,8 +52,8 @@ class TabsView extends Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    const { previousIndex, selectedIndex } = this.state;
-    if (previousIndex === null || selectedIndex !== nextState.selectedIndex) {
+    const { previousIndex, selectedIndex, tabsCount } = this.state;
+    if (previousIndex === null || selectedIndex !== nextState.selectedIndex || tabsCount <= 0) {
       return false;
     }
 
@@ -214,7 +214,7 @@ class TabsView extends Component {
             {childrens.map((view, index) => {
               return (
                 <Touchable
-                  key={view}
+                  key={view.props.icon}
                   style={styles.touchable}
                   onPress={() => this.transitionTo(index)}
                 >
@@ -256,7 +256,10 @@ class TabsView extends Component {
         >
           {childrens.map(view => {
             return (
-              <View key={view.props} style={{ width: width, maxWidth: width, ...noSelect }}>
+              <View
+                key={view.props.children}
+                style={{ width: width, maxWidth: width, ...noSelect }}
+              >
                 {view.props.children}
               </View>
             );
