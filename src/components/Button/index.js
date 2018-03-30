@@ -55,6 +55,7 @@ export class Button extends Component {
         activeOpacity={0.8}
         onPress={() => setTimeout(() => onPress(), onPressDelay)}
         onLongPress={() => onLongPress()}
+        style={{ borderRadius: style.borderRadius, overflow: style.overflow || 'hidden' }}
       >
         <View style={[styles.button, this.getButtonStyles(), style]}>
           <Text style={[styles.text, this.getTextStyles(), textStyle]}>

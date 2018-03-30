@@ -17,7 +17,11 @@ module.exports = {
     libraryTarget: 'amd'
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
+    alias: {
+      // Support for react-native-web
+      'react-native': 'react-native-web'
+    }
   },
   module: {
     rules: [
