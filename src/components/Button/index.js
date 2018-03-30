@@ -50,12 +50,15 @@ export class Button extends Component {
   render() {
     const { text, textStyle, style, onLongPress, onPress, onPressDelay } = this.props;
 
+    const borderRadius = style && style.borderRadius ? style.borderRadius : 0;
+    const overflow = style && style.overflow ? style.overflow : 'hidden';
+
     return (
       <Touchable
         activeOpacity={0.8}
         onPress={() => setTimeout(() => onPress(), onPressDelay)}
         onLongPress={() => onLongPress()}
-        style={{ borderRadius: style.borderRadius || 0, overflow: style.overflow || 'hidden' }}
+        style={{ borderRadius, overflow }}
       >
         <View style={[styles.button, this.getButtonStyles(), style]}>
           <Text style={[styles.text, this.getTextStyles(), textStyle]}>
