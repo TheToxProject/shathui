@@ -14,7 +14,7 @@ module.exports = {
     filename: BUNDLE_NAME,
     publicPath: BUILD_PATH,
     library: 'ToxShathui',
-    libraryTarget: 'amd'
+    libraryTarget: 'commonjs'
   },
   resolve: {
     extensions: ['.js', '.jsx'],
