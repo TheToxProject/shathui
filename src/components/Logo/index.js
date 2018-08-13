@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 import styles from './styles';
 
-import webMuted from './assets/logo-muted.svg';
-import webWhite from './assets/logo-white.svg';
-import webBlack from './assets/logo-black.svg';
+import webMuted from './assets/logo-muted-vector.svg';
+import webWhite from './assets/logo-white-vector.svg';
+import webBlack from './assets/logo-black-vector.svg';
 import muted from './assets/logo-muted.png';
 import white from './assets/logo-white.png';
 import black from './assets/logo-black.png';
@@ -52,9 +52,9 @@ export class Logo extends Component {
   getVariantImage(variant) {
     return Platform.select({
       web: {
-        muted: muted,
-        white: white,
-        black: black
+        muted: webMuted,
+        white: webWhite,
+        black: webBlack
       },
       default: {
         muted: muted,
