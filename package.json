@@ -1,6 +1,6 @@
 {
   "name": "@toxclient/shathui",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Platform-agnostic Chat UI components for The Universal Tox Client. ",
   "main": "src/index.js",
   "files": [
